@@ -9,8 +9,6 @@ services:
       - ./etc/redis.conf:/etc/redis.conf
     labels:
       - "SERVICE_NAME=redis"
-      - "app=redis"
-      - "zone=kitt"
 
 networks:
   default:
