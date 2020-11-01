@@ -11,3 +11,5 @@ services:
     network_mode: host
     cap_add:
       - SYS_TIME
+    volumes:
+      - ./etc/redis.conf:/etc/redis.conf

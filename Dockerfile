@@ -9,3 +9,5 @@ COPY --from=redis /usr/local/bin/redis* /usr/local/bin/
 COPY service /service
 
 ENTRYPOINT [ "/tini", "--", "/service" ]
+
+CMD [ "/etc/redis.conf" ]

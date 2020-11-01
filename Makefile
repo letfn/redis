@@ -25,5 +25,9 @@ recreate:
 	$(MAKE) clean
 	$(MAKE) up
 
+recycle:
+	$(MAKE) build
+	$(MAKE) recreate
+
 logs:
 	docker-compose logs -f
