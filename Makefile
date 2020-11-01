@@ -12,6 +12,9 @@ push: # Push letfn/redis
 bash: # Run bash shell with letfn/redis
 	docker run --rm -ti --entrypoint bash letfn/redis
 
+exec:
+	docker-compose exec redis bash
+
 clean:
 	docker-compose down --remove-orphans
 
