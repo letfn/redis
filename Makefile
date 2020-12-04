@@ -3,14 +3,14 @@ SHELL := /bin/bash
 menu:
 	@perl -ne 'printf("%10s: %s\n","$$1","$$2") if m{^([\w+-]+):[^#]+#\s(.+)$$}' Makefile
 
-build: # Build letfn/redis
-	docker build -t letfn/redis .
+build: # Build defn/redis
+	podman build -t defn/redis .
 
-push: # Push letfn/redis
-	docker push letfn/redis
+push: # Push defn/redis
+	podman push defn/redis
 
-bash: # Run bash shell with letfn/redis
-	docker run --rm -ti --entrypoint bash letfn/redis
+bash: # Run bash shell with defn/redis
+	podman run --rm -ti --entrypoint bash defn/redis
 
 exec:
 	docker-compose exec redis bash

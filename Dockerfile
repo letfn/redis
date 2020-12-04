@@ -1,6 +1,6 @@
 FROM redis:6.0.9 AS redis
 
-FROM letfn/python
+FROM defn/python
 
 USER app
 
